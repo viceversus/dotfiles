@@ -1,4 +1,147 @@
-syntax on
+set nocompatible
+filetype off 
 
-" Wrap gitcommit file types at the appropriate length
-filetype indent plugin on
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+
+" Vundle Plugins
+" Colors
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+" Productivity
+Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-surround'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-cucumber'
+Plugin 'thoughtbot/vim-rspec'
+
+" Languages and syntax
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'nono/vim-handlebars'
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'mxw/vim-jsx'
+Plugin 'fatih/vim-go'
+Plugin 'wting/rust.vim'
+Plugin 'raichoo/haskell-vim'
+Plugin 'moll/vim-node'
+Plugin 'slim-template/vim-slim'
+Plugin 'elzr/vim-json'
+
+" Files
+Plugin 'scrooloose/nerdtree'
+Plugin 'ctrlpvim/ctrlp.vim'
+
+call vundle#end()
+filetype plugin indent on
+
+" Ruler and display
+set number
+set ruler
+set encoding=utf8
+set colorcolumn=80
+
+" Searching
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set magic
+set showmatch
+set mat=2
+
+" Indentation rules
+set expandtab
+set smarttab
+set shiftwidth=2
+set softtabstop=2
+set ai
+set si
+
+" Files
+set nobackup
+set nowritebackup
+set noswapfile
+set history=50
+
+" Panes
+set splitbelow
+set splitright
+
+" Make backspace not suck
+set backspace=eol,start,indent
+set backspace=2
+
+" Keymappings
+let mapleader=","
+
+" Always show the status eine
+set laststatus=2
+
+let g:airline_theme = 'jellybeans'
+let g:airline_detect_modified = 1
+
+" Syntax highlighting and colors
+syntax enable
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors = 256
+
+" Ctrl-P Settings
+" Ensure Ctrl-P isn't bound by default
+let g:ctrlp_map = ''
+
+" Ensure max height isn't too large. (for performance)
+let g:ctrlp_max_height = 10
+" Fix fix new windows opening in split from startify
+let g:ctrlp_reuse_window = 'startify'
+let g:ctrlp_mruf_max = 350
+let g:ctrlp_mruf_default_order = 0
+
+" Leader Commands
+nnoremap <leader>. :CtrlPRoot<CR>
+nnoremap <leader>m :CtrlPMRUFiles<CR>
+
+if executable('ag')
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  " HatTip: http://robots.thoughtbot.com/faster-grepping-in-vim and
+  " @ethanmuller
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Core
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Better saving
+nnoremap <leader>w :w<CR>
+inoremap <silent> <leader>w <c-o>:w<CR>
+
+" Leave insert mode as quick as you can
+inoremap kj <Esc>
+
+" Leave insert mode as quick as you cannes
+nnoremap <silent> <c-k> :wincmd k<CR>
+nnoremap <silent> <c-j> :wincmd j<CR>
+nnoremap <silent> <c-h> :wincmd h<CR>
+nnoremap <silent> <c-l> :wincmd l<CR>
+
+" Hard mode
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+ 
+" Toggle paste mode on and off
+map <leader>pp :setlocal paste!<cr>
