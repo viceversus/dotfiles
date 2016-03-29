@@ -7,6 +7,7 @@
         co = checkout
         ci = commit
         st = status
+        cob = checkout -b
         promote = !$ZSH/bin/git-promote
         wtf     = !$ZSH/bin/git-wtf
         rank-contributors = !$ZSH/bin/git-rank-contributors
