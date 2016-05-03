@@ -7,14 +7,23 @@ then
 fi
 
 # The rest of my fun git aliases
-alias gl='git pull --prune'
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
-alias gp='git push origin HEAD'
-alias gd='git diff'
-alias gc='git commit'
-alias gca='git commit -a'
+alias g='git'
 alias gco='git checkout'
-alias gcb='git copy-branch-name'
 alias gb='git branch'
-alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
-alias gac='git add -A && git commit -m'
+alias gst='git status'
+alias gs='git status -sb'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias ggp='git push'
+alias ggp!='git push --force'
+alias ggpu='git push -u origin'
+alias ggl='git pull'
+alias gglr='git pull --rebase'
+alias gaa='git add -A'
+alias gc='git commit -v'
+alias gc!='git commit -v --amend'
+alias gl='git log'
+alias gm='git merge --no-ff'
+alias grm='git rebase master'
+alias gr='git rebase'
+alias gci="checkout_branch_interactive"
