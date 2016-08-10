@@ -1,9 +1,21 @@
 "*":
   core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     disabledPackages: [
       "background-tips"
       "exception-reporting"
       "metrics"
+      "tree-view"
     ]
     followSymlinks: false
     hideGitIgnoredFiles: true
@@ -24,8 +36,13 @@
     invisibles: {}
     showIndentGuide: true
     softWrapAtPreferredLineLength: true
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
   "go-plus":
     goPath: "/Users/holman/Code/go"
+  nuclide:
+    "nuclide-home":
+      showHome: false
   "release-notes":
     viewedVersion: "0.89.0"
   "spell-check":
