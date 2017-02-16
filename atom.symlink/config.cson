@@ -17,7 +17,7 @@
       "background-tips"
       "exception-reporting"
       "metrics"
-      "tree-view"
+      "nuclide"
     ]
     followSymlinks: false
     hideGitIgnoredFiles: true
@@ -37,7 +37,7 @@
   editor:
     autoIndentOnPaste: false
     fontFamily: "Menlo"
-    fontSize: 20
+    fontSize: 17
     invisibles: {}
     showIndentGuide: true
     softWrapAtPreferredLineLength: true
