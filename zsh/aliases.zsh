@@ -7,3 +7,5 @@ alias farmers-ci='ssh -N -L 8080:mobile-ci.local:8080 c5-proxy'
 
 alias be="bundle exec "
 alias sourcetree='open -a SourceTree'
+
+alias brandless='cd ~/Workspace/Brandless/brandless.com'
