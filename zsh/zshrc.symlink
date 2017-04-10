@@ -46,3 +46,6 @@ ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
 
 eval "$(direnv hook zsh)"
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
