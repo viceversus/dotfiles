@@ -43,3 +43,5 @@
 	trustExitCode = true
 [rerere]
 	enabled = true
+[http]
+	sslVerify = true
