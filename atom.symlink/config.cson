@@ -43,8 +43,7 @@
     softWrapAtPreferredLineLength: true
   "go-plus":
     goPath: "/Users/holman/Code/go"
-  linter:
-    errorPanelHeight: 27
+  linter: {}
   nuclide:
     "nuclide-home":
       showHome: false
