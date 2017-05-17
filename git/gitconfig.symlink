@@ -8,9 +8,7 @@
         ci = commit
         st = status
         cob = checkout -b
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        rank-contributors = !$ZSH/bin/git-rank-contributors
+        pushf = push --force-with-lease
         count   = !git shortlog -sn
         remote-branches = "!for branch in `git branch -r --merged | grep -v HEAD`; do echo -e `git show --format='%ci %cr %an' $branch | head -n 1` $branch; done | sort -r"
         scrub = !sh -c ‘git co master && git branch --merged | grep -v “*” | xargs git branch -d && git remote prune origin’
@@ -38,7 +36,7 @@
         default = simple
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
