@@ -27,5 +27,3 @@ alias gm='git merge --no-ff'
 alias grm='git rebase master'
 alias gr='git rebase'
 alias gci="checkout_branch_interactive"
-
-alias scrub="!sh -c ‘git checkout master && git branch --merged | grep -v “*” | xargs git branch -d && git remote prune origin’"
