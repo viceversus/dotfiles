@@ -145,3 +145,6 @@ inoremap <Down> <NOP>
  
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
+
+" NERDTree
+map <C-e> :NERDTreeToggle<CR>

@@ -35,7 +35,6 @@
       "glacier-syntax"
     ]
   editor:
-    autoIndentOnPaste: false
     fontFamily: "Menlo"
     fontSize: 17
     invisibles: {}
