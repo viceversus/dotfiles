@@ -1,47 +1,5 @@
 set nocompatible
-filetype off 
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle
-Plugin 'VundleVim/Vundle.vim'
-
-" Vundle Plugins
-" Colors
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-
-" Productivity
-Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-surround'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-cucumber'
-Plugin 'thoughtbot/vim-rspec'
-
-" Languages and syntax
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'nono/vim-handlebars'
-Plugin 'pangloss/vim-javascript'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'mxw/vim-jsx'
-Plugin 'fatih/vim-go'
-Plugin 'wting/rust.vim'
-Plugin 'raichoo/haskell-vim'
-Plugin 'moll/vim-node'
-Plugin 'slim-template/vim-slim'
-Plugin 'elzr/vim-json'
-
-" Files
-Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
-
-call vundle#end()
-filetype plugin indent on
+filetype off
 
 " Ruler and display
 set number
@@ -92,7 +50,6 @@ let g:airline_detect_modified = 1
 " Syntax highlighting and colors
 syntax enable
 set background=dark
-colorscheme solarized
 let g:solarized_termcolors = 256
 
 " Ctrl-P Settings
@@ -142,7 +99,7 @@ inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 inoremap <Up> <NOP>
 inoremap <Down> <NOP>
- 
+
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
