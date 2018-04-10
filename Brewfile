@@ -11,6 +11,7 @@ brew 'imagemagick'
 brew 'libtool'
 brew 'libxslt'
 brew 'libyaml'
+brew 'mix-completion
 brew 'openssl'
 brew 'node'
 brew 'readline'

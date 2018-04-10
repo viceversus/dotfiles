@@ -8,6 +8,9 @@
         ci = commit
         st = status
         cob = checkout -b
+        cb = checkout -b
+        rb = rebase
+        rbi = rebase -i
         pushf = push --force-with-lease
         count   = !git shortlog -sn
         remote-branches = "!for branch in `git branch -r --merged | grep -v HEAD`; do echo -e `git show --format='%ci %cr %an' $branch | head -n 1` $branch; done | sort -r"
@@ -36,7 +39,7 @@
         default = simple
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true

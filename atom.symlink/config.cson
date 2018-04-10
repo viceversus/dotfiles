@@ -36,7 +36,7 @@
     ]
   editor:
     fontFamily: "Menlo"
-    fontSize: 17
+    fontSize: 15
     invisibles: {}
     showIndentGuide: true
     softWrapAtPreferredLineLength: true
@@ -55,5 +55,7 @@
       "text.git-commit"
       "text.html.basic"
     ]
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
